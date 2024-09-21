@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+.bgWrapperP1 {
+    background-image: url(images/blur.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.bgWrapperP2 {
+    background-image: url(images/dance-electronica-tickets-1\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+ol, ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+img {
+    vertical-align: middle;
+}
+:root {
+    --clr-dark: #571E6F;
+    --clr-light: #f1f5f9;
+    --clr-accent: #FC3EFE;
+    --clr-ash: #5a5a5a;
+    --border-red: 1px solid red;
+    --trn-delay: ease-in 0.3s;
+    --box-shd: 0 0 20px 20px rgba(0, 0, 0, 0.24);
+    --box-shd2: 0 0 10px 10px rgba(251, 62, 254, 0.311);
+    --text-regular: clamp(1rem, 1.1vw + 1px, 18px);
+    --text-large: clamp(1.1rem, 1.3vw + 1px, 20px);
+    --xxl-header: clamp(2.5rem, 3.3vw + 1px, 70px);
+    --xl-header: clamp(2.5rem, 2.5vw + 1px, 50px);
+    --l-header: clamp(1.5rem, 1.5vw + 1px, 30px);
+    --fnt-oswald: "Oswald", sans-serif;
+    --fnt-br: "Blade Runner Movie Font";
+}
+/* =========Navbar CSS============= */
+#navbar {
+    width: 100%;
+    height: 0;
+}
+.navbarWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.navbarWrapper__Social i {
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.4rem;
+    transition: 0.2s ease;
+}
+.navbarWrapper__Social i:hover {
+    scale: 1.2;
+}
+.navbarWrapper__Pages {
+    transform: translateY(45px);
+}
+.navbarWrapper__Pages a{
+    margin-left: 2rem;
+    color: white;
+    font-weight: 600;
+    transition: var(--trn-delay);
+}
+.navbarWrapper__Pages a:hover {
+    color: var(--clr-accent);
+}
+/* ===========Banner CSS=========== */
+#banner {
+    height: 100dvh;
+}
+.bannerShader {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 0, 128, 0.24);
+}
+.bannerWrapper {
+    display: flex;
+    align-items: center;
+}
+.bannerWrapper__img img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    box-shadow: var(--box-shd);
+}
+.bannerWrapper__logo img {
+    position: absolute;
+    top: 45%;
+    rotate: 270deg;
+    width: 25%
+}
+.bannerWrapper__play {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid var(--clr-accent);
+    position: absolute;
+    bottom: 35%;
+    right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.438);
+    transition: var(--trn-delay);
+    scale: 0.8;
+}
+.bannerWrapper__play a {
+    font-size: 3rem;
+    color: var(--clr-accent);
+    margin-left: 5px;
+}
+/* ===========discography========== */
+#discography {
+    /* height: 300vh; */
+    background-image: linear-gradient(to bottom, rgba(128, 0, 128, 0.24), #3a0b4e, #22062e);
+    padding-top: 100px;
+}
+.discographyWrapper__Header h1 {
+    font-size: 150px;
+    color:transparent;
+    font-family: var(--fnt-oswald);
+    transform: translateX(-500px);
+    opacity: 0;
+    transition: 0.8s ease-in;
+    -webkit-text-stroke: 3px #FC3EFE;
+
+}
+#discography:hover .discographyWrapper__Header h1 {
+    transform: translateX(0);
+    opacity: 1;
+}
+.discographyWrapper__BodyText {
+    line-height: 250%;
+    margin: 50px 0;
+    font-family: var(--fnt-oswald);
+}
+.large {
+    font-size: 90px;
+    font-weight: bolder;
+}
+.small {
+    font-size: 60px;
+}
+.medium {
+    font-size: 80px;
+}
+.discographyWrapper__Body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.discographyWrapper__BodyAlbumsCover {
+    width: 600px;
+    height: 400px;
+    transform: translateX(600px);
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.8s ease-in;
+    border: 4px solid #fb3efe79;
+}
+.discographyWrapper__BodyAlbumsCover:hover {
+    box-shadow: 0 0 15px 15px rgba(251, 62, 254, 0.411);
+}
+.discographyWrapper__BodyAlbumsCover img {
+    width: 600px;
+    height: 400px;
+    transition: var(--trn-delay);
+}
+#discography:hover .discographyWrapper__BodyAlbumsCover {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* discogrphy2================== */
+.discographyWrapper2 {
+    padding-bottom: 100px;
+}
+.discographyWrapper2__Line1 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap: 1rem;
+}
+.discographyWrapper2__Line1pic img {
+    width: 250px;
+    cursor: pointer;
+}
+.discographyWrapper2__Line1pic {
+    transition: var(--trn-delay);
+}
+.discographyWrapper2__Line1pic:hover {
+    box-shadow: var(--box-shd2);
+}
+.discographyWrapper2__Line2pic {
+    transition: var(--trn-delay);
+}
+.discographyWrapper2__Line2pic:hover {
+    box-shadow: var(--box-shd2);
+}
+.discographyWrapper2__Line2pic img{
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+.discographyWrapper2__Line2 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap: 1rem;
+    margin: 1rem 0;
+}
+.pic-left {
+    transform: translateX(-300px);
+    transition: 0.5s ease-in;
+    opacity: 0;
+}
+.discographyWrapper2:hover .pic-left{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.pic-right {
+    transform: translateX(200px);
+    transition: 0.5s ease-in;
+    opacity: 0;
+}
+.discographyWrapper2:hover .pic-right{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.last-line-mod {
+    transform: translateY(200px);
+    opacity: 1;
+    transition: 1s ease-out;
+}
+.discographyWrapper2:hover .last-line-mod {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ==============Gallery=========== */
+#gallery {
+    background-image: linear-gradient(to top, rgba(128, 0, 128, 0.24), #3a0b4e, #22062e);
+    padding-top: 100px;
+    padding: 300px 0;
+}
+.galleryWrapperHeader h1 {
+    font-size: 100px;
+    color: transparent;
+    font-family: var(--fnt-oswald);
+    background-image: url(https://www.esquireme.com/cloud/2021/11/07/JQ2IdAlp-antoine-j-r3XvSBEQQLo-unsplash-1200x800.jpg);
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.galleryWrapperBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    margin: 50px 0;
+}
+.galleryWrapperBody__Linepic1 {
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.452);
+}
+
+.galleryWrapperBody img:hover {
+    scale: 1.2;
+}
+.galleryWrapperBody__Line {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    align-items: center;
+}
+.galleryWrapperBody__Line img {
+    height: 300px;
+    transition: var(--trn-delay);
+    cursor: pointer;
+}
+.galleryWrapperBody__Linepic2 {
+    width: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.452);
+}
+.galleryWrapperBody__Linepic2 img {
+    object-fit: cover;
+    width: 550px;
+    height: 300px;
+
+}
+.galleryWrapperBody__Linepic img {
+    height: 300px;
+    width: 1000px;
+}
+.pic3 {
+    width: 1100px;
+    height: 200px;
+}
+.line3 .galleryWrapperBody__Linepic1{
+    height: 500px;
+    width: 350px;
+}
+.line3 .galleryWrapperBody__Linepic1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.galleryWrapperBody__Button button {
+    background-color: var(--clr-accent);
+    border: 4px solid var(--clr-accent);
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    transition: var(--trn-delay);
+    cursor: pointer;
+}
+.galleryWrapperBody__Button button a {
+    font-size: 1.2rem;
+    color: white;
+}
+.galleryWrapperBody__Button button:hover {
+    background-color: transparent;
+    color: var(--clr-accent);
+}
+#streamsec {
+    background-color: rgba(128, 0, 128, 0.24);
+    padding-bottom: 50px;
+}
+.streamWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.streamWrapper h1{
+    font-size: 25px;
+    color: #56AF5B;
+    padding: 2rem 0;
+}
+.streamWrapper__Spotify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 5px solid #56AF5B;
+    border-radius: 20px;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: var(--trn-delay);
+}
+.streamWrapper__Spotify:hover {
+    background-color: rgba(86, 175, 90, 0.336);
+}
+.streamWrapper__Spotify img {
+    width: 150px;
+}
+.streamWrapper__Soundcloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 5px solid #F26C23;
+    border-radius: 20px;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: var(--trn-delay);
+}
+.streamWrapper__Soundcloud:hover {
+    background-color: rgba(242, 108, 35, 0.288);
+}
+.streamWrapper__Soundcloud img {
+    width: 250px;
+}
+.streamWrapper__Soundcloud h1 {
+    color: #F26C23;
+}
+/* ============Footer============== */
+#footer {
+    background-color: #190124;
+    padding: 100px 0;
+}
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerWrapper__Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+}
+.footerWrapper h2 {
+    color: var(--clr-accent);
+    margin-bottom: 1rem;
+}
+.footerWrapper p {
+    line-height: 160%;
+}
+
+/* Media Queries============================================================== */
+
+@media (min-width: 1750px) {
+    .container {
+        width: 85%;
+    }
+    .navbarWrapper {
+        padding: 30px 0;
+    }
+    .navbarWrapper__Social i {
+        font-size: 2rem;
+    }
+    .navbarWrapper__Pages {
+        transform: translateY(65px);
+    }
+    .navbarWrapper__Pages a {
+        font-size: 1.5rem;
+    }
+    .discographyWrapper__Header h1 {
+        font-size: 220px;
+        -webkit-text-stroke: 10px var(--clr-accent);
+    }
+    .discographyWrapper__BodyText {
+        line-height: 350%;
+    }
+    .large {
+        font-size: 130px;
+        font-weight: bolder;
+    }
+    .small {
+        font-size: 90px;
+    }
+    .medium {
+        font-size: 110px;
+    }
+    .discographyWrapper__BodyAlbumsCover {
+        width: 900px;
+        height: 600px;
+    }
+    .discographyWrapper__BodyAlbumsCover img{
+        width: 900px;
+        height: 600px;
+    }
+    .discographyWrapper2__Line1pic img {
+        width: 350px;
+        cursor: pointer;
+    }
+    .discographyWrapper2__Line2pic img{
+        width: 600px;
+        height: 600px;
+    }
+    .galleryWrapperHeader h1 {
+        font-size: 150px;
+    }
+    .galleryWrapperBody__Linepic1 {
+        height: 450px;
+        width: 725px;
+    }
+    .galleryWrapperBody__Line img {
+        height: 450px;
+    }
+    .galleryWrapperBody__Linepic2 {
+        width: 750px;
+    }
+    .galleryWrapperBody__Linepic2 img {
+        width: 780px;
+        height: 450px;
+    }
+    .galleryWrapperBody__Linepic img {
+        height: 450px;
+        width: 1100px;
+    }
+    .pic3 {
+        width: 1500px;
+        height: 450px;
+    }
+    .line3 .galleryWrapperBody__Linepic1{
+        height: 750px;
+        width: 520px;
+    }
+    .galleryWrapperBody__Button button {
+        padding: 1.5rem 4.5rem;
+    }
+    .galleryWrapperBody__Button button a{
+        font-size: 1.8rem;
+    }
+    .footerWrapper h2 {
+        font-size: 2.5rem;
+    }
+    .footerWrapper p {
+        font-size: 1.5rem;
+    }
+}
